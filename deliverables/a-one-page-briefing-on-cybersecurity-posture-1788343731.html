@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cybersecurity Posture Brief – CEO AI OS | April 2026</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-bottom: 4px solid #667eea;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header .meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.content {
+  padding: 2.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #667eea;
+}
+
+.section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.section p {
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+}
+
+.risk-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.risk-card {
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.risk-card.critical {
+  background: #fff5f5;
+  border-color: #c53030;
+}
+
+.risk-card.high {
+  background: #fffaf0;
+  border-color: #dd6b20;
+}
+
+.risk-card.medium {
+  background: #fffff0;
+  border-color: #d69e2e;
+}
+
+.risk-card .risk-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.risk-card.critical .risk-label {
+  color: #c53030;
+}
+
+.risk-card.high .risk-label {
+  color: #dd6b20;
+}
+
+.risk-card.medium .risk-label {
+  color: #d69e2e;
+}
+
+.risk-card .risk-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.risk-card .risk-desc {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.controls-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.controls-table th {
+  background: #edf2f7;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #2d3748;
+  border-bottom: 2px solid #cbd5e0;
+}
+
+.controls-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+}
+
+.controls-table tr:hover {
+  background: #f7fafc;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.implemented {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.partial {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.status-badge.planned {
+  background: #bee3f8;
+  color: #2c5282;
+}
+
+.action-list {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.action-list li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #f7fafc;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+  color: #2d3748;
+}
+
+.action-list li strong {
+  color: #1a202c;
+}
+
+.footer {
+  background: #edf2f7;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid #cbd5e0;
+  font-size: 0.85rem;
+  color: #718096;
+  text-align: center;
+}
+
+.gap-notice {
+  background: #fffaf0;
+  border: 1px solid #f6ad55;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  color: #744210;
+}
+
+.gap-notice strong {
+  color: #7c2d12;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+  color: #4a5568;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Cybersecurity Posture Brief – CEO AI OS</h1>
+    <div class="meta">Prepared for: Ajit | Date: 5 April 2026 | Prepared by: Clara (Director of Cybersecurity lens)</div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h2>Executive Summary</h2>
+      <p>The CEO AI OS has implemented foundational security controls across the STRIDE threat model and EU AI Act compliance framework. Three material gaps require immediate attention: <strong>credential exposure risk in recent code deliveries</strong>, <strong>absence of a tested lockdown protocol for CRITICAL alerts</strong>, and <strong>lack of a formal supply-chain security assessment for the MCP Supervisor Phase 1 deployment</strong>.</p>
+      <p>Current posture is <strong>adequate for controlled pilot operation</strong> but <strong>not production-ready</strong> for broader rollout without remediation of the identified gaps.</p>
+    </div>
+
+    <div class="section">
+      <h2>Risk Assessment – Top Three Threats</h2>
+      <div class="risk-matrix">
+        <div class="risk-card critical">
+          <div class="risk-label">Critical</div>
+          <div class="risk-title">Credential Exposure</div>
+          <div class="risk-desc">Yahoo App Password may appear in logs, outputs, or email bodies if agents mishandle credential config files.</div>
+        </div>
+        <div class="risk-card high">
+          <div class="risk-title">Unauthorised Email Send</div>
+          <div class="risk-desc">Agent boundary matrix restricts email send to Ajit001@yahoo.com only — violation triggers CRITICAL alert but lockdown procedure is untested.</div>
+        </div>
+        <div class="risk-card high">
+          <div class="risk-title">Prompt Injection via Tool Results</div>
+          <div class="risk-desc">System prompt is immutable, but instructions embedded in IMAP reads, file reads, or Second Brain search results could manipulate agent behaviour.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Security Controls – Current State</h2>
+      <table class="controls-table">
+        <thead>
+          <tr>
+            <th>STRIDE Threat</th>
+            <th>Control Implemented</th>
+            <th>Status</th>
+            <th>Gap / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spoofing</td>
+            <td>Agent identity declared in every skill</td>
+            <td><span class="status-badge implemented">Implemented</span></td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Tampering</td>
+            <td>Input sanitisation + output validation</td>
+            <td><span class="status-badge partial">Partial</span></td>
+            <td>No explicit validation routine in dispatcher or daily-cos-kanban for tool results containing embedded instructions</td>
+          </tr>
+          <tr>
+            <td>Repudiation</td>
+            <td>Immutable timestamped audit log (Decision Log)</td>
+            <td><span class="status-badge implemented">Implemented</span></td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Information Disclosure</td>
+            <td>Output filtering; no PII/credentials in outputs</td>
+            <td><span class="status-badge partial">Partial</span></td>
+            <td>Policy documented but no automated redaction layer. Recent code review (cos-frontdoor-full.zip) pending — credential handling not yet verified</td>
+          </tr>
+          <tr>
+            <td>Denial of Service</td>
+            <td>Rate limiting + circuit breakers</td>
+            <td><span class="status-badge implemented">Implemented</span></td>
+            <td>CB-01 (IMAP) in place; daily firing indicates persistent infra issue, not attack</td>
+          </tr>
+          <tr>
+            <td>Elevation of Privilege</td>
+            <td>Least-privilege access list (deny by default)</td>
+            <td><span class="status-badge implemented">Implemented</span></td>
+            <td>Agent Boundary Matrix enforced by dispatcher validation gates</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Compliance – EU AI Act & GDPR</h2>
+      <h3>EU AI Act Risk Tier: Limited Risk</h3>
+      <p>The CEO AI OS does not perform high-risk processing (no biometric ID, no critical infrastructure control, no employment decisions). Transparency obligations are met: agents declare identity and limitations in every interaction.</p>
+      
+      <h3>GDPR Status</h3>
+      <ul>
+        <li><strong>Lawful basis:</strong> Legitimate interest (executive productivity tooling for data controller)</li>
+        <li><strong>Data minimisation:</strong> Applied — only flagged/unread emails and notes processed; no bulk retention</li>
+        <li><strong>Retention policy:</strong> Session-only (default); kanban boards and briefs stored in /outputs/ with no automatic purge schedule — <em>gap: no documented retention window for output artefacts</em></li>
+        <li><strong>Subject rights:</strong> Not applicable (Ajit is the sole data subject and controller)</li>
+        <li><strong>DPA with Anthropic:</strong> <em>Status unknown — not present in provided context</em></li>
+        <li><strong>RoPA updated:</strong> <em>Status unknown</em></li>
+        <li><strong>DPIA:</strong> Not required (no high-risk processing)</li>
+        <li><strong>72-hour breach notification plan:</strong> Documented in Escalation SOP (CRITICAL alert → immediate response)</li>
+      </ul>
+      
+      <div class="gap-notice">
+        <strong>Gap:</strong> No evidence of a Data Processing Agreement with Anthropic or updated Records of Processing Activities. These are mandatory even for low-risk AI systems under GDPR Article 28 and Article 30.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Vendor & Supply Chain Security</h2>
+      <p>The CEO AI OS depends on:</p>
+      <ul>
+        <li><strong>Anthropic Claude API</strong> (all agents)</li>
+        <li><strong>Yahoo Mail IMAP</strong> (daily-cos-kanban, flagged-email-action-centre, yahoo-email-sort)</li>
+        <li><strong>MCP Supervisor</strong> (Phase 1 deployment pending)</li>
+      </ul>
+      
+      <h3>Current State</h3>
+      <p><strong>Anthropic:</strong> No vendor security assessment on file. DPA status unknown. SOC 2 Type II certification assumed but not verified.</p>
+      <p><strong>Yahoo Mail:</strong> App Password rotation schedule not documented. No MFA on the Yahoo account itself (MFA delegated to app password model).</p>
+      <p><strong>MCP Supervisor:</strong> Open desk item flags "MCP Supervisor Phase 1 deploy" with no accompanying security review. Supply-chain risk not assessed.</p>
+      
+      <div class="gap-notice">
+        <strong>Critical gap:</strong> MCP Supervisor deployment must not proceed without: (1) source code review or third-party audit, (2) least-privilege scoping of its access to CEO AI OS internals, (3) documented kill switch and rollback plan.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Immediate Actions Required</h2>
+      <ul class="action-list">
+        <li><strong>P1 – Code Review:</strong> Complete full review of cos-frontdoor-full.zip and sample board (currently flagged as urgent). Verify no credentials embedded in code, logs, or sample outputs.</li>
+        <li><strong>P1 – Lockdown Protocol Test:</strong> Execute a tabletop exercise of the CRITICAL alert lockdown procedure. Confirm: Can you disable all agents within 5 minutes? Is the Yahoo App Password rotated immediately? Is Anthropic API access revoked?</li>
+        <li><strong>P1 – MCP Supervisor Security Review:</strong> Do not deploy MCP Supervisor Phase 1 until a supply-chain security assessment is complete. Minimum requirements: source transparency, least-privilege API surface, tested rollback.</li>
+        <li><strong>P2 – DPA with Anthropic:</strong> Confirm Data Processing Agreement is in place. If not, engage legal/procurement to execute one before any production expansion.</li>
+        <li><strong>P2 – Output Retention Policy:</strong> Define and document retention window for /outputs/ artefacts (kanban boards
