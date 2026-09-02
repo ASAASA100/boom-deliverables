@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerPoint Deliverable Request: DAMA Best Practices | CEO AI OS</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --aap-blue: #0047AB;
+  --aap-teal: #008B8B;
+  --aap-grey: #F5F5F5;
+  --aap-dark: #2C3E50;
+  --aap-red: #C0392B;
+  --aap-amber: #F39C12;
+  --aap-green: #27AE60;
+  --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: var(--aap-dark);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, var(--aap-blue) 0%, var(--aap-teal) 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header .meta {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content {
+  padding: 2.5rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--aap-blue);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--aap-teal);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--aap-dark);
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.info-box {
+  background: var(--aap-grey);
+  border-left: 4px solid var(--aap-blue);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.warning-box {
+  background: #FFF3CD;
+  border-left: 4px solid var(--aap-amber);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.critical-box {
+  background: #F8D7DA;
+  border-left: 4px solid var(--aap-red);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.success-box {
+  background: #D4EDDA;
+  border-left: 4px solid var(--aap-green);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+
+thead {
+  background: var(--aap-blue);
+  color: white;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+  background: var(--aap-grey);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.badge-p1 {
+  background: var(--aap-red);
+  color: white;
+}
+
+.badge-p2 {
+  background: var(--aap-amber);
+  color: white;
+}
+
+.badge-info {
+  background: var(--aap-blue);
+  color: white;
+}
+
+.badge-complete {
+  background: var(--aap-green);
+  color: white;
+}
+
+.next-steps {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.next-steps h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.next-steps ul {
+  margin-left: 1.5rem;
+}
+
+.next-steps li {
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  background: var(--aap-dark);
+  color: white;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.code-block {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1.25rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: 0.6rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>PowerPoint Deliverable: DAMA Best Practices</h1>
+    <div class="meta">
+      <span>📋 <strong>Request:</strong> PowerPoint using Flevy template</span>
+      <span>📅 <strong>Date:</strong> <script>document.write(new Date().toLocaleDateString('en-GB', {day: 'numeric', month: 'short', year: 'numeric'}))</script></span>
+      <span>👤 <strong>For:</strong> Ajit</span>
+      <span>⚠️ <strong>Status:</strong> Action Required</span>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <!-- Executive Summary -->
+    <section class="section">
+      <h2>Executive Summary</h2>
+      
+      <div class="critical-box">
+        <h3 style="margin-top: 0;">⚠️ Cannot Complete Request As Specified</h3>
+        <p><strong>Problem:</strong> You requested a PowerPoint deliverable using the Flevy MCP to source a template. The Flevy MCP integration does not appear in the context I was provided — I cannot access external systems unless they are explicitly wired into the CEO AI OS and visible to me at runtime.</p>
+        <p><strong>What this means:</strong> I cannot automatically retrieve a Flevy template, populate it, or generate a .pptx file. This HTML document is not the deliverable you asked for.</p>
+      </div>
+
+      <p><strong>What you have below:</strong></p>
+      <ul>
+        <li>A complete DAMA best-practices deck outline (slide-by-slide) you can use manually</li>
+        <li>Technical steps to wire Flevy MCP into the OS if you want this automated in future</li>
+        <li>Two immediate paths forward to get your PowerPoint</li>
+      </ul>
+
+    </section>
+
+    <!-- Immediate Next Steps -->
+    <section class="section">
+      <h2>Immediate Paths Forward</h2>
+
+      <h3>Option A: Manual Flevy Retrieval (Fastest — 15 minutes)</h3>
+      <ol>
+        <li>Visit <strong>flevy.com</strong> → Search "DAMA" or "Data Management Framework"</li>
+        <li>Download a suitable template (e.g., "Data Governance Framework" or "Enterprise Data Management Playbook")</li>
+        <li>Use the slide-by-slide outline in Section 3 below to populate the template with DAMA-specific content</li>
+        <li>Estimated time: 15 min to find template + 2-3 hours to customise</li>
+      </ol>
+
+      <h3>Option B: Wire Flevy MCP Integration (One-Time Setup — 30-60 minutes)</h3>
+      <p>If you want automated template retrieval in future, the Flevy MCP needs to be installed and configured in the CEO AI OS. Steps required:</p>
+      
+      <ol>
+        <li><strong>Verify MCP availability:</strong> Check if a Flevy MCP server exists (I do not have this information in my context). If not, one would need to be built or sourced.</li>
+        <li><strong>Configure API access:</strong> Flevy provides an API for enterprise customers — you would need:
+          <ul>
+            <li>Flevy account credentials (enterprise tier likely required)</li>
+            <li>API key provisioning</li>
+            <li>Search and download permissions configured</li>
+          </ul>
+        </li>
+        <li><strong>Install MCP server:</strong> Add Flevy MCP to the OS's MCP registry (requires system admin or DevOps support)</li>
+        <li><strong>Test integration:</strong> Confirm Clara can query Flevy's library and retrieve templates programmatically</li>
+      </ol>
+
+      <div class="warning-box">
+        <p><strong>Escalation required:</strong> Wiring a new MCP integration crosses my authority boundary (per Agent_Boundary_Matrix). This requires your explicit approval and likely involves system admin or DevOps resources.</p>
+      </div>
+
+      <h3>Recommendation</h3>
+      <p><strong>For today:</strong> Use Option A (manual Flevy retrieval) with the outline below.</p>
+      <p><strong>For future:</strong> If you frequently need template-driven deliverables from Flevy or similar platforms, investing in Option B (MCP integration) is worthwhile — it turns a 3-hour manual task into a 5-minute automated one.</p>
+
+    </section>
+
+    <!-- DAMA PowerPoint Outline -->
+    <section class="section">
+      <h2>DAMA Best Practices — PowerPoint Outline</h2>
+      <p>Below is a complete slide-by-slide structure for a 25-slide executive deck on DAMA best practices. This can be applied to any Flevy template you retrieve, or used to build a deck from scratch.</p>
+
+      <h3>Deck Structure</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 8%;">Slide</th>
+            <th style="width: 32%;">Title</th>
+            <th style="width: 60%;">Content / Visual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Title Slide</td>
+            <td><strong>DAMA Best Practices Framework</strong><br>[Organisation Name] | [Date]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Agenda</td>
+            <td>1. What is DAMA? | 2. Maturity Assessment | 3. Governance | 4. Architecture | 5. Data Quality | 6. Metadata | 7. Implementation Roadmap</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Executive Summary</td>
+            <td><strong>Why DAMA matters:</strong> Regulatory compliance (GDPR, AI Act), operational efficiency, AI/ML readiness, risk mitigation<br><strong>Key message:</strong> Data is a strategic asset — DAMA provides the management framework</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>What is DAMA?</td>
+            <td><strong>DAMA International:</strong> Professional body for data management<br><strong>DMBOK v2:</strong> 11 knowledge areas covering the full data lifecycle<br>Visual: Circle diagram of 11 KAs with Data Governance at center</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>DAMA DMBOK Knowledge Areas</td>
+            <td>Table of 11 areas: Data Governance, Architecture, Modeling & Design, Storage & Operations, Security, Integration & Interoperability, Document & Content, Reference & Master Data, DW & BI, Metadata, Data Quality<br>Brief description for each</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>DAMA Maturity Model</td>
+            <td>5 maturity levels:<br>1. Initial (Ad hoc) | 2. Managed (Repeatable) | 3. Defined (Standardised) | 4. Quantitatively Managed (Measured) | 5. Optimising (Continuous improvement)<br>Visual: Maturity ladder or capability heat map</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Maturity Self-Assessment</td>
+            <td>Sample assessment questions by knowledge area (5-10 questions)<br>Scoring guide: 1 = No formal processes, 5 = Fully optimised<br>Output: Current-state maturity heat map by knowledge area</td>
